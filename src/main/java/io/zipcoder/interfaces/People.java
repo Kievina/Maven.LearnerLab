@@ -1,10 +1,15 @@
 package io.zipcoder.interfaces;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class People implements Iterable<Person> {
     List<Person> personList;
+
+    public People(){
+        this.personList = new ArrayList<Person>();
+    }
 
     public void add(Person person) {
         personList.add(person);
