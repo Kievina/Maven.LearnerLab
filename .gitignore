@@ -5,4 +5,7 @@
 .settings
 .idea/.name
 .idea/workspace.xml
+.idea/compiler.xml
+.idea/misc.xml
+
 
