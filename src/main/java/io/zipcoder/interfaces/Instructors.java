@@ -1,7 +1,5 @@
 package io.zipcoder.interfaces;
 
-import com.sun.org.apache.bcel.internal.generic.InstructionComparator;
-
 public final class Instructors extends People {
     private static final Instructors INSTANCE = new Instructors();
 
