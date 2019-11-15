@@ -12,10 +12,6 @@ public class ZipCodeWilmington {
 
     }
 
-//    public Person[] toArray() {
-//        return new Person[0];
-//    }
-
     public static void hostLecture(Teacher teacher, double numberOfHours) {
         teacher.lecture(students.toArray(), numberOfHours);
 
