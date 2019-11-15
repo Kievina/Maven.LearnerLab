@@ -14,21 +14,20 @@ public final class ZipCodeWilmington extends People {
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours) {
-        int numberOfLearners = students.personList.size();
-//        teacher.lecture(Students.getInstance().toArray(), numberOfHours);
+        teacher.lecture((Learner[]) Students.getInstance().toArray(), numberOfHours);
     }
 
     public void hostLecture(Long id, double numberOfHours) {
-        int numberOfLearners = students.personList.size();
         Teacher teacher = (Teacher) instructors.findById(id);
-        teacher.lecture(students.personList.toArray(new Learner[numberOfLearners]), numberOfHours);
+        teacher.lecture((Learner[]) Students.getInstance().toArray(), numberOfHours);
 
     }
 
     public Map<Student, Double> getStudyMap() {
         map = new HashMap<Student, Double>();
-        for (Person student : students) {
-            //map.put(student, student.getTotalStudyTime());
+        for (Person person : students) {
+            Student student = (Student) person;
+            map.put(student, student.getTotalStudyTime());
         }
         return map;
     }
