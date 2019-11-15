@@ -9,7 +9,9 @@ public class Student extends Person implements Learner {
     }
 
     public void learn(Double numberOfHours) {
-    this.totalStudyTime += numberOfHours;
+
+
+        this.totalStudyTime += numberOfHours;
     }
 
     public double getTotalStudyTime() {

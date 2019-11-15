@@ -9,25 +9,22 @@ public class TestStudents {
     @Test
     public void testGetInstance1() {
         Students students = Students.getInstance();
-        int expected = 2;
-        int actual = students.personList.size();
         Long expected1 = 11L;
         Long expected2 = 12L;
-        students.personList.get(0).getId().equals(expected1);
-        students.personList.get(1).getId().equals(expected2);
-        Assert.assertTrue(students.personList.get(0).getId().equals(11L));
-        Assert.assertTrue(students.personList.get(1).getId().equals(12L));
-
+        Long actual1 = students.personList.get(0).getId();
+        Long actual2 = students.personList.get(1).getId();
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
     }
 
+    @Test
     public void testGetInstance2() {
         Students students = Students.getInstance();
-        int expected = 2;
-        int actual = students.personList.size();
-        Long expected1 = 11L;
-        Long expected2 = 12L;
-
-        Assert.assertTrue(students.personList.get(0).getName().equals("A"));
-        Assert.assertTrue(students.personList.get(1).getName().equals("B"));
+        String expected1 = "A";
+        String expected2 = "B";
+        String actual1 = students.personList.get(0).getName();
+        String actual2 = students.personList.get(1).getName();
+        Assert.assertEquals(expected1, actual1);
+        Assert.assertEquals(expected2, actual2);
     }
 }
