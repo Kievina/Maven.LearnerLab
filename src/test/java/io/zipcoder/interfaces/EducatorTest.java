@@ -22,6 +22,8 @@ public class EducatorTest {
         Student student = new Student(31L, "Kievina");
         Educator.INSTRUCTOR1.teach(student, 20.0);
         Assert.assertEquals(student.getTotalStudyTime(), Educator.INSTRUCTOR1.getTimeWorked(), 0.0);
+        Educator.INSTRUCTOR1.setTimeWorked(0.0);
+
     }
 
     @Test
@@ -44,5 +46,6 @@ public class EducatorTest {
         double expected = 20.0;
         Educator.INSTRUCTOR1.setTimeWorked(expected);
         Assert.assertEquals(expected, Educator.INSTRUCTOR1.getTimeWorked(), 0.0);
+        Educator.INSTRUCTOR1.setTimeWorked(0.0);
     }
 }

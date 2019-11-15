@@ -56,19 +56,6 @@ public class TestZipCodeWilmington {
     }
 
     @Test
-    public void testHostLecture2Educator() {
-        Long teacherId = 14L;
-        Students students = Students.getInstance();
-        Double numberOfHours = 20.0;
-        Double expectedChange = 10.0;
-
-//        ZipCodeWilmington.hostLecture(Educator.INSTRUCTOR1, numberOfHours);
-        Double actualChange = numberOfHours / students.personList.size();
-
-        Assert.assertEquals(expectedChange, actualChange, 0.0);
-    }
-
-    @Test
     public void testGetStudyMap() {
         Student expectedS1 = Students.getInstance().findById(11L);
         Student expectedS2 = Students.getInstance().findById(12L);
