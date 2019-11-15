@@ -3,30 +3,31 @@ package io.zipcoder.interfaces;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class ZipCodeWilmington extends People {
+public class ZipCodeWilmington {
     private static final Students students = Students.getInstance();
     private static final Instructors instructors = Instructors.getInstance();
     private static final ZipCodeWilmington INSTANCE = new ZipCodeWilmington();
-    private Map<Student, Double> map;
 
     private ZipCodeWilmington() {
 
     }
 
-    public void hostLecture(Teacher teacher, double numberOfHours) {
-        Student[] students = (Student[]) Students.getInstance().toArray();
-        teacher.lecture(students, numberOfHours);
+//    public Person[] toArray() {
+//        return new Person[0];
+//    }
+
+    public static void hostLecture(Teacher teacher, double numberOfHours) {
+        teacher.lecture(students.toArray(), numberOfHours);
 
     }
 
-    public void hostLecture(Long id, double numberOfHours) {
-        Teacher teacher = (Teacher) instructors.findById(id);
-        teacher.lecture((Student[]) Students.getInstance().toArray(), numberOfHours);
+    public static void hostLecture(Long id, double numberOfHours) {
+        instructors.findById(id).lecture(students.toArray(), numberOfHours);
 
     }
 
-    public Map<Student, Double> getStudyMap() {
-        map = new HashMap<Student, Double>();
+    public static Map<Student, Double> getStudyMap() {
+        Map<Student, Double> map = new HashMap<Student, Double>();
         for (Person person : students) {
             Student student = (Student) person;
             map.put(student, student.getTotalStudyTime());

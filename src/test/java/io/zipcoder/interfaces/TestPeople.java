@@ -7,7 +7,7 @@ public class TestPeople {
 
     @Test
     public void testAdd() {
-        People people = new People();
+        People people = new ConcretePeople();
         Person person1 = new Person(11L, "A");
         Person person2 = new Person(12L, "B");
         people.add(person1);
@@ -19,7 +19,7 @@ public class TestPeople {
 
     @Test
     public void testRemove() {
-        People people = new People();
+        People people = new ConcretePeople();
         Person person1 = new Person(11L, "A");
         Person person2 = new Person(12L, "B");
         people.add(person1);
@@ -34,7 +34,7 @@ public class TestPeople {
 
     @Test
     public void testRemoveById() {
-        People people = new People();
+        People people = new ConcretePeople();
         Person person1 = new Person(11L, "A");
         Person person2 = new Person(12L, "B");
         people.add(person1);
@@ -49,7 +49,7 @@ public class TestPeople {
 
     @Test
     public void testFindById() {
-        People people = new People();
+        People people = new ConcretePeople();
         Person person1 = new Person(11L, "A");
         Person person2 = new Person(12L, "B");
         people.add(person1);
